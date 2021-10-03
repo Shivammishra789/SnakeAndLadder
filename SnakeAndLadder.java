@@ -5,7 +5,12 @@ public class SnakeAndLadder {
 	
 		int POSITION=0;
 
-		System.out.println("Current position of player is " + POSITION);
+		int dice=(int)Math.floor(Math.random() * 10)%6+1;
+
+		//Random dice number displayed
+
+ 		System.out.println("Your dice number is " + dice);
+
 	}
 	
 
