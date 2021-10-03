@@ -8,6 +8,8 @@ public class SnakeAndLadder {
 	
 		int POSITION=0;
 
+	while (POSITION != 100) {       //repeat till reaches 100
+
 		int dice=(int)Math.floor(Math.random() * 10)%6+1;  //to get random dice number
 
                 int options=(int)Math.floor(Math.random() * 10)%3;  //to get random 3 options to play
@@ -23,6 +25,10 @@ public class SnakeAndLadder {
         case snake:
                 System.out.println("Snake");
                                 POSITION-=dice;  //position is decresed by ramdom dice number
+                                
+                if (POSITION <0) {
+                        POSITION=0;		//if value is less than zero sets to zero
+                }
                                 break;
         default:
                 System.out.println("No Play");   //position remains same
@@ -33,7 +39,8 @@ public class SnakeAndLadder {
         System.out.println("Players current position is " + POSITION );   //current position of player after play
 
 
-	}
-	
+	      }
 
-}
+       	}
+
+ }
