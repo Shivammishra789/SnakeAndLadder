@@ -7,10 +7,15 @@ public class SnakeAndLadder {
 	public static void main(String[] args) {
 	
 		int POSITION=0;
+		int diceCount=0;
 
 	while (POSITION != 100) {       //repeat till reaches 100
 
 		int dice=(int)Math.floor(Math.random() * 10)%6+1;  //to get random dice number
+
+		if(dice>0) {
+			diceCount++;         //gets nmuber of times dice is played
+		}
 
                 int options=(int)Math.floor(Math.random() * 10)%3;  //to get random 3 options to play
 
@@ -45,6 +50,10 @@ public class SnakeAndLadder {
 
 
 	      }
+	System.out.println();
+	System.out.println("WooHoo!! you won the game");
+
+	System.out.println("The number of times dice played is "+diceCount);
 
        	}
 
