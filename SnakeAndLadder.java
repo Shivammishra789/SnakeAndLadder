@@ -21,6 +21,11 @@ public class SnakeAndLadder {
         case ladder:
                 System.out.println("Ladder");
                                 POSITION+=dice;  //position is increased by random dice number
+
+		if(POSITION>100){
+		   POSITION-=dice;              //keeps on same position if greater than 100
+		
+		}
                                 break;
         case snake:
                 System.out.println("Snake");
